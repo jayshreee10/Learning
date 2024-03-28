@@ -1,4 +1,4 @@
-let myArr = [100, 205, 396, 107, 829, 721, 950];
+// let myArr = [100, 205, 396, 107, 829, 721, 950];
 // given arr specific index value = index + own value
 // function addIndexToArr() {
   //   for (i = 0; i < myArr.length; i++) {
@@ -75,18 +75,68 @@ let myArr = [100, 205, 396, 107, 829, 721, 950];
 
 // new approach
 
-function sortingArr(){
-  for (i=0;i<myArr.length;i++){
-    let  newArr = 0;
-    if(i == (myArr.length-1)){  //to get array last element
-     newArr = (myArr[i] + myArr[0]) ;    
-        myArr[i]= newArr
-    }
-    else {
-      newArr = myArr[i]+ myArr[i+1] //adding all the values with their next value
-      myArr[i]= newArr
+// function sortingArr(){
+//   for (i=0;i<myArr.length;i++){
+//     let  newArr = 0;
+//     if(i == (myArr.length-1)){  //to get array last element
+//      newArr = (myArr[i] + myArr[0]) ;    
+//         myArr[i]= newArr
+//     }
+//     else {
+//       newArr = myArr[i]+ myArr[i+1] //adding all the values with their next value
+//       myArr[i]= newArr
+//   }
+// }
+//   console.log(myArr)
+// }
+// sortingArr()
+
+
+// function loops () {
+
+//   for (i=1 ; i<=1000; i=i*2){
+    
+//     console.log (i)
+//     // i = i+2 
+//   }
+// }
+// loops ()
+// intialization of the array index ; 
+// condition checking 
+// incrementing the index value in a loop ;
+
+// 1,4,7,10,13,17,20,23,27 ....100
+
+// 1,2,4,8,16,32,64,128,256...
+
+//input 1,2,3,4,5
+// output 3,7,13,21,31
+// 1 * 2 + 1
+// 2 * 3 + 1 
+// 3 * 4 + 1
+// function seriesOne(){
+//   for (i=0 ; i<=10 ; i++){
+//     let printValue = i * (i+1)+1 ;
+//     console.log (printValue)
+//   }
+// }
+// seriesOne()
+
+
+// 1*1 + 2 
+// 2*2 + 3
+// 3*3 + 4
+
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+
+// 1+0
+// 1+1
+// 2+1 
+// 3+2
+function seriesTwo (){
+  let arr = [0,1]
+  for (i=0 ; i<=144;i++ ){
+  console.log(arr.push (i+(i-1)))
   }
 }
-  console.log(myArr)
-}
-sortingArr()
+seriesTwo ()
