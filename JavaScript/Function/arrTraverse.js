@@ -44,15 +44,15 @@ let myArr = [100, 205, 396, 107, 829, 721, 950];
 // op : [100,205]
 //      [205,396]
 
-function sortingArr(){
-  for (i=0;i<myArr.length;i++){
-    if(i == (myArr.length-1)){  //to get array last element
-      console.log (myArr[i],myArr[0]) // printing the last value with the first value 
-    }
-    else console.log (myArr[i],myArr[i+1]) //printing all the values with their next value
-  }
-}
-sortingArr()
+// function sortingArr(){
+//   for (i=0;i<myArr.length;i++){
+//     if(i == (myArr.length-1)){  //to get array last element
+//       console.log (myArr[i],myArr[0]) // printing the last value with the first value 
+//     }
+//     else console.log (myArr[i],myArr[i+1]) //printing all the values with their next value
+//   }
+// }
+// sortingArr()
 
 
 // op :[ 305 , 601 , 503 .....1050]
@@ -76,17 +76,17 @@ sortingArr()
 // new approach
 
 function sortingArr(){
-  let myNewArr=[]; // empty array
   for (i=0;i<myArr.length;i++){
     let  newArr = 0;
     if(i == (myArr.length-1)){  //to get array last element
      newArr = (myArr[i] + myArr[0]) ;    
-      myNewArr.push (newArr )   //assigning value to empty array
+        myArr[i]= newArr
     }
     else {
       newArr = myArr[i]+ myArr[i+1] //adding all the values with their next value
-      
-      myNewArr.push (newArr )   }
+      myArr[i]= newArr
   }
-  console.log(myNewArr)
 }
+  console.log(myArr)
+}
+sortingArr()
