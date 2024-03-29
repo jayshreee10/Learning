@@ -33,18 +33,18 @@ let myArr = [100, 205, 396, 107, 829, 721, 950];
 // madam
 
 function palindrome(word) {
-  let wordLength = word.length;
+  let wordLength = word.length-1;
   let newWord = "";
   let message = "";
   for (i = wordLength; i >= 0; i--) {
-    newWord = word[i]+ newWord;
-    if (newWord != word) {
-      message = "not a palindrome word";
-    } 
-    else {
-      message = "is a palindrome word";
-    }
-  }
+    newWord = newWord + word[i];
+}
+if (newWord != word) {
+  message = "not a palindrome word";
+} 
+else {
+  message = "is a palindrome word";
+}
   console.log(message);
 }
 
