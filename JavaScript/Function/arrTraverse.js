@@ -1,7 +1,7 @@
 // let myArr = [100, 205, 396, 107, 829, 721, 950];
 // given arr specific index value = index + own value
 // function addIndexToArr() {
-  //   for (i = 0; i < myArr.length; i++) {
+//   for (i = 0; i < myArr.length; i++) {
 //     // console.log (myArr[i])
 //     console.log(myArr[i] + i);
 //   }
@@ -27,18 +27,17 @@
 //   for (i = 0; i < myArr.length; i++) {
 //     if (myArr[i] % 2 == true) {
 //       evenNumbersum = evenNumbersum + myArr[i]
-    
+
 //     }
 //     if (myArr[i] % 2 == false) {
 //       oddNumbersum =  oddNumbersum + myArr[i]
 //     }
-    
+
 //   }
 //   console.log(evenNumbersum + " sum of even number");
 //   console.log(oddNumbersum + " sum of odd number");
 // }
 // filterNumber()
-
 
 //write a program to display the current and next element at one place
 // op : [100,205]
@@ -47,13 +46,12 @@
 // function sortingArr(){
 //   for (i=0;i<myArr.length;i++){
 //     if(i == (myArr.length-1)){  //to get array last element
-//       console.log (myArr[i],myArr[0]) // printing the last value with the first value 
+//       console.log (myArr[i],myArr[0]) // printing the last value with the first value
 //     }
 //     else console.log (myArr[i],myArr[i+1]) //printing all the values with their next value
 //   }
 // }
 // sortingArr()
-
 
 // op :[ 305 , 601 , 503 .....1050]
 
@@ -62,12 +60,12 @@
 //   for (i=0;i<myArr.length;i++){
 //     let  newArr = 0;
 //     if(i == (myArr.length-1)){  //to get array last element
-//      newArr = (myArr[i] + myArr[0]) ;    
+//      newArr = (myArr[i] + myArr[0]) ;
 //       myNewArr.push (newArr )   //assigning value to empty array
 //     }
 //     else {
 //       newArr = myArr[i]+ myArr[i+1] //adding all the values with their next value
-      
+
 //       myNewArr.push (newArr )   }
 //   }
 //   console.log(myNewArr)
@@ -79,7 +77,7 @@
 //   for (i=0;i<myArr.length;i++){
 //     let  newArr = 0;
 //     if(i == (myArr.length-1)){  //to get array last element
-//      newArr = (myArr[i] + myArr[0]) ;    
+//      newArr = (myArr[i] + myArr[0]) ;
 //         myArr[i]= newArr
 //     }
 //     else {
@@ -91,18 +89,17 @@
 // }
 // sortingArr()
 
-
 // function loops () {
 
 //   for (i=1 ; i<=1000; i=i*2){
-    
+
 //     console.log (i)
-//     // i = i+2 
+//     // i = i+2
 //   }
 // }
 // loops ()
-// intialization of the array index ; 
-// condition checking 
+// intialization of the array index ;
+// condition checking
 // incrementing the index value in a loop ;
 
 // 1,4,7,10,13,17,20,23,27 ....100
@@ -112,7 +109,7 @@
 //input 1,2,3,4,5
 // output 3,7,13,21,31
 // 1 * 2 + 1
-// 2 * 3 + 1 
+// 2 * 3 + 1
 // 3 * 4 + 1
 // function seriesOne(){
 //   for (i=0 ; i<=10 ; i++){
@@ -122,8 +119,7 @@
 // }
 // seriesOne()
 
-
-// 1*1 + 2 
+// 1*1 + 2
 // 2*2 + 3
 // 3*3 + 4
 
@@ -131,12 +127,20 @@
 
 // 1+0
 // 1+1
-// 2+1 
+// 2+1
 // 3+2
-function seriesTwo (){
-  let arr = [0,1]
-  for (i=0 ; i<=144;i++ ){
-  console.log(arr.push (i+(i-1)))
+function fibonacis() {
+  let opArr = [];
+  let firstNum = 0;
+  let secondNum = 1;
+  opArr.push(firstNum, secondNum);
+  console.log(firstNum, secondNum);
+  for (i = 0; i <= 10; i++) {
+    let nextNum = firstNum + secondNum;
+    opArr.push(nextNum);
+    firstNum = secondNum;
+    secondNum = nextNum;
   }
+  console.log(opArr);
 }
-seriesTwo ()
+fibonacis();
