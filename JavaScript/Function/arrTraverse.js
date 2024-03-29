@@ -129,18 +129,51 @@
 // 1+1
 // 2+1
 // 3+2
-function fibonacis() {
-  let opArr = [];
-  let firstNum = 0;
-  let secondNum = 1;
-  opArr.push(firstNum, secondNum);
-  console.log(firstNum, secondNum);
-  for (i = 0; i <= 10; i++) {
-    let nextNum = firstNum + secondNum;
-    opArr.push(nextNum);
-    firstNum = secondNum;
-    secondNum = nextNum;
+// function fibonacci() {
+//   let opArr = [];
+//   let firstNum = 0;
+//   let secondNum = 1;
+//   opArr.push(firstNum, secondNum);
+//   console.log(firstNum, secondNum);
+//   for (i = 0; i <= 10; i++) {
+//     let nextNum = firstNum + secondNum;
+//     opArr.push(nextNum);
+//     firstNum = secondNum;
+//     secondNum = nextNum;
+//   }
+//   console.log(opArr);
+// }
+// fibonacci();
+
+// printing table
+
+// function table(num) {
+//   let opTableArr = [];
+//   for (let i = 1; i <= 10; i++) {
+//     let opTable = num * i;
+//     opTableArr.push(opTable);
+//   }
+//   console.log(opTableArr);
+// }
+// table(112);
+
+
+// calculator logic 
+
+function calculator (num1,operator,num2,){
+  if (operator == "-"){
+    console.log (num1 - num2)
   }
-  console.log(opArr);
+  else if (operator == "+"){
+    console.log (num1 + num2)
+  }
+  else if (operator == "*"||operator == "x"||operator == "X" ){
+    console.log (num1 * num2)
+  }
+  else if (operator == "/"){
+    console.log (num1 / num2)
+  }
+  else ("invalid")
+  console.log ()
 }
-fibonacis();
+calculator (1,"+",2)
