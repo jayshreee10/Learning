@@ -1,35 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  let [count, setCount] = useState(0);
+ function addCount(){
+  setCount (count+1)
+ }
+ function subCount(){
+   if(count<=0){
+     subButton.disable = true
+    }
+    else 
+    setCount (count-1)
+  
+}
+function resetCount(){
+setCount (count = 0)
+}
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+      <div className="counter" >
+        <div className="text"  style={{  "height": "20vh"} }>{count}</div>
+        <div
+          className="buttons"
+          style={{
+            display: "flex",
+            "justify-content": "space-between",
+            width: "40vw",
+          }}
+        > 
+          <input
+            type="button"
+            value="ADD"
+            style={{ width: "100px", height: "30px" } } 
+            onClick = {()=>{addCount()}}
+          />
+          <input
+          className="subButton"
+            type="button"
+            value="SUBTRACT"
+            style={{ width: "100px", height: "30px" }}
+            onClick = {()=>{subCount()}}
+
+          />
+          <input
+          className="resetButton"
+            type="button"
+            value="Reset"
+            style={{ width: "100px", height: "30px" }}
+            onClick = {()=>{resetCount()}}
+
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
