@@ -5,13 +5,16 @@ import './App.css'
 // import { useRef } from 'react';
 
 function App() {
- 
-  const [time, setTime] = useState(new Date().toLocaleTimeString);
-  // setInterval(() => {
-  //   setTime(new Date().toLocaleTimeString);
-  // }, 1000);
+  function getTime(){
+    return new Date().toLocaleTimeString()
+  }
+  const [time, setTime] = useState(getTime());
+  setInterval(() => {
+    setTime(getTime ());
+  }, 1000);
   return (
     <>
+    <div className='clockFrame'>
       <div
         className="Clock"
         style={{
@@ -23,10 +26,13 @@ function App() {
           display:"flex",
           alignItems:"center",
           justifyContent:"center",
-          fontSize:"40px"
+          fontSize:"40px",
+          border:"3px solid gray",
+          borderRadius:"10px"
         }}
       >
        {time}
+      </div>
       </div>
     </>
   );
