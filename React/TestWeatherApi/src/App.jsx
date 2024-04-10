@@ -34,7 +34,7 @@ function App() {
     console.log(newData.temperature)
     console.log(newData.location)
     console.log(newData.humidity)
-    console.log(newData. wind)
+    console.log(newData.wind)
     console.log(newData.pressure)
     setData(locationData)
     
@@ -60,25 +60,25 @@ function App() {
         className="location"
         style={{ height: "10vh", width: "100vw", backgroundColor: "black" }}
       >
-      {newData.location}
+      {/* {newData.location} */}
       </div>
       <div
         className="humidity"
         style={{ height: "10vh", width: "100vw", backgroundColor: "black" }}
       >
-       {newData.humidity}
+       {/* {newData.humidity} */}
       </div>
       <div
         className="pressure"
         style={{ height: "10vh", width: "100vw", backgroundColor: "black" }}
       >
-        {newData.pressure}
+        {/* {newData.pressure} */}
       </div>
       <div
         className="wind"
         style={{ height: "10vh", width: "100vw", backgroundColor: "black" }}
       >
-    {newData.wind}
+    {/* {newData.wind} */}
       </div>
     </>
   );
