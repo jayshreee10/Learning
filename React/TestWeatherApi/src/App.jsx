@@ -13,8 +13,10 @@ function App() {
 
   }
    const  [data,setData]= useState(defaultData)
+
+    let inputLocation = ""
     async function callApi (){
-    const response = await fetch ("http://api.openweathermap.org/geo/1.0/direct?q=berhampur&appid=7d3a506953bf739eb497cd7257dfe861")
+    const response = await fetch (`http://api.openweathermap.org/geo/1.0/direct?q=${inputLocation}&appid=7d3a506953bf739eb497cd7257dfe861`)
     const apiData = await response.json()
     console.log (apiData )
     let longitude = apiData[0].lon;
@@ -36,8 +38,7 @@ function App() {
     console.log(newData.humidity)
     console.log(newData.wind)
     console.log(newData.pressure)
-    setData(locationData)
-    
+    setData(newData)
   }
 
   return (
@@ -46,7 +47,8 @@ function App() {
         className="search"
         style={{ height: "10vh", width: "100vw", backgroundColor: "black", }}
       >
-        <input type="text" placeholder="location" style={{height:"4vh",width:"40vw",marginTop:"10px"}}/>
+        <input type="text" placeholder="location" style={{height:"4vh",width:"40vw",marginTop:"10px"}}
+        onChange={(e)=>{inputLocation = e.target.value}}/>
         <button type="button" onClick={()=>{callApi()}}>search</button>
       </div>
 
@@ -54,25 +56,25 @@ function App() {
         className="temperature"
         style={{ height: "10vh", width: "100vw", backgroundColor: "black" }}
       >
-       {newData.temperature}
+       {data.temperature}
       </div>
       <div
         className="location"
         style={{ height: "10vh", width: "100vw", backgroundColor: "black" }}
       >
-      {/* {newData.location} */}
+      {data.location}
       </div>
       <div
         className="humidity"
         style={{ height: "10vh", width: "100vw", backgroundColor: "black" }}
       >
-       {/* {newData.humidity} */}
+       {data.humidity}
       </div>
       <div
         className="pressure"
         style={{ height: "10vh", width: "100vw", backgroundColor: "black" }}
       >
-        {/* {newData.pressure} */}
+        {data.pressure}
       </div>
       <div
         className="wind"
