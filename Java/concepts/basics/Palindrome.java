@@ -14,7 +14,7 @@ public class Palindrome {
             System.out.println(word + " is a palindrome word");
         }
         else {
-            System.out.println(word + " is not a palindrome word");
+            System.out.println(word + "is not a palindrome word");
 
         }
     }
