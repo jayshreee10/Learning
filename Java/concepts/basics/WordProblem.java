@@ -20,5 +20,6 @@ public class WordProblem {
             System.out.println("Your Total Bill is " + total);
 
         }
+        sc.close();
     }
 }
