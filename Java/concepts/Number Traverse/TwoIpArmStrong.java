@@ -6,7 +6,7 @@ public class TwoIpArmStrong {
         System.out.println("Enter the starting number");
         Scanner sc = new Scanner( System.in);
         start = sc.nextInt();
-        System.out.println("Enter the starting number");
+        System.out.println("Enter the ending number");
         stop = sc.nextInt();
 
         for ( int i = start ; i <= stop ; i++ ){
