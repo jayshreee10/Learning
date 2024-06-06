@@ -1,7 +1,8 @@
-// Java Program to Swap Two Numbers using 3rd variable
 import java.util.Scanner ;
 public class Swap {
     public static void main(String []args){
+        
+        // Java Program to Swap Two Numbers using 3rd variable
         int FirstNum , SecondNum , Swap ;
 
         Scanner sc = new Scanner (System.in);
@@ -14,9 +15,10 @@ public class Swap {
         FirstNum = SecondNum ;
         SecondNum = Swap ;
 
-        System.out.println (FirstNum +","+ SecondNum );
-
+        System.out.println (FirstNum +","+ SecondNum ); 
+        sc.close();
     }
 }
 
-// Java Program to Swap Two Numbers using 3rd variable
+
+
