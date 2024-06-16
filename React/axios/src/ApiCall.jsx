@@ -59,13 +59,7 @@ function ApiCall() {
       >
         search
       </button>
-      <button
-        onClick={() => {
-          console.log(todos);
-        }}
-      >
-        Check
-      </button>
+     
       <ul>
         {todos.map((value) => {
           return (
