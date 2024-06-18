@@ -16,10 +16,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import { GiMoneyStack, GiReceiveMoney } from "react-icons/gi";
-import { BiSolidLogOut } from "react-icons/bi";
+import { TbLogout2 } from "react-icons/tb";
 import Button from "@mui/material/Button";
 
-const drawerWidth = 70;
+const drawerWidth = 200;
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -198,7 +198,7 @@ export default function Home() {
                 }}
               >
                 <div style={{ display: "flex" }}>
-                  <BiSolidLogOut
+                  <TbLogout2
                     style={{
                       height: "25px",
                       width: "25px",
