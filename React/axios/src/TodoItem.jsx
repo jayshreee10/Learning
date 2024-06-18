@@ -26,11 +26,10 @@ function TodoItem(props) {
       </div>
 
       <div>
-        {" "}
-        {"id : "} {item.id}{" "}
+         {item.id}
       </div>
       <div>
-        {" "}
+      
         {"title : "}
         {item.title}{" "}
       </div>
