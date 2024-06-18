@@ -15,11 +15,11 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import { GiMoneyStack } from "react-icons/gi";
-import { GiReceiveMoney } from "react-icons/gi";
+import { GiMoneyStack, GiReceiveMoney } from "react-icons/gi";
 import { BiSolidLogOut } from "react-icons/bi";
 import Button from "@mui/material/Button";
-const drawerWidth = 240;
+
+const drawerWidth = 70;
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -132,8 +132,6 @@ export default function Home() {
         </DrawerHeader>
         <Divider />
         <List>
-          {/* { */}
-          {/* //   ["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => ( */}
           <ListItem disablePadding sx={{ display: "block" }}>
             <ListItemButton
               sx={{
@@ -149,71 +147,103 @@ export default function Home() {
                   justifyContent: "center",
                 }}
               >
-                {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
-
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <div>
-                    <GiMoneyStack
-                      style={{ height: "30px", width: "30px", color: "" }}
-                    />
-                  </div>
-                  <div>
-                    {" "}
-                    <GiReceiveMoney
-                      style={{ height: "30px", width: "30px", color: "" }}
-                    />
-                  </div>
-                  <div style={{ display: "flex" }}>
-                    {" "}
-                    <BiSolidLogOut
-                      style={{
-                        height: "25px",
-                        width: "25px",
-                        color: "",
-                        marginTop: "15px",
-                      }}
-                    />
-                    {/* <p>hii</p> */}
-                  </div>
+                <div>
+                  <GiMoneyStack
+                    style={{ height: "30px", width: "30px" }}
+                    title="New Payment"
+                  />
                 </div>
               </ListItemIcon>
-              {/* <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} /> */}
             </ListItemButton>
           </ListItem>
-          {/* ))  } */}
+
+          <ListItem disablePadding sx={{ display: "block" }}>
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+                <div>
+                  <GiReceiveMoney
+                    style={{ height: "30px", width: "30px" }}
+                    title="Payment History"
+                  />
+                </div>
+              </ListItemIcon>
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding sx={{ display: "block" }}>
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+                <div style={{ display: "flex" }}>
+                  <BiSolidLogOut
+                    style={{
+                      height: "25px",
+                      width: "25px",
+                      marginTop: "15px",
+                    }}
+                    title="LogOut"
+                  />
+                </div>
+              </ListItemIcon>
+            </ListItemButton>
+          </ListItem>
         </List>
         <Divider />
       </Drawer>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, background: "white", display: "flex" }}
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden", // Prevents overflow
+        }}
       >
         <DrawerHeader />
-        <Typography>
-          {/* <div
+        <Typography component="div">
+          <div
             style={{
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              height: "60vh",
-              width: "65vw",
-              //   background: "blue",
-              flexDirection: "column",
-              boxShadow: " rgba(3, 102, 214, 0.3) 0px 0px 0px 3px",
-              borderRadius: "10px",
+              height: "100%",
+              width: "100%",
             }}
           >
-            <p>Welcome</p>
             <Button
               variant="contained"
               style={{ background: "#2DA8F2", margin: "15px" }}
             >
               New Payment
             </Button>
-            <Button variant="contained" style={{ background: "#2DA8F2" }}>
-              Payment History
-            </Button>
-          </div> */}
+          </div>
         </Typography>
       </Box>
     </Box>
